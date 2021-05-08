@@ -27,6 +27,8 @@
 
       --inter-font: Inter;
       --lexend-deca-font: Lexend Deca;
+
+      font-size: 15px;
     }
 
     * {
@@ -38,7 +40,6 @@
       height: 100%;
       width: 100%;
       margin: 0;
-      font-size: 15px;
       font-family: var(--inter-font);
     }
 
@@ -46,17 +47,17 @@
       width: 100%;
       height: 100%;
       display: flex;
-      padding: 0 25px;
       justify-content: center;
       align-items: center;
       background: var(--very-dark-blue);
     }
 
     .card {
-      border-radius: 5px;
+      border-radius: 0.5em;
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      max-width: 85%;
     }
 
     .card__image-container {
@@ -72,7 +73,7 @@
     }
 
     .card__content {
-      padding: 40px 30px;
+      padding: 2.5em 1.8em;
       background: var(--dark-blue);
       text-align: center;
       height: 100%;
@@ -81,9 +82,9 @@
     .card__content-header {
       color: var(--white);
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: 0.5em;
       font-weight: 700;
-      font-size: 27px;
+      font-size: 1.8em;
     }
 
     .card__content-header_highlighted {
@@ -93,39 +94,40 @@
     .card__content-paragraph {
       color: var(--transparent-white-75);
       margin: 0;
-      margin-bottom: 35px;
+      margin-bottom: 3em;
       line-height: 1.6em;
     }
 
     .card__content-stats {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 2em;
     }
 
     .card__content-stats > div {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 0.3em;
     }
 
     .card__content-stats > div > span:first-of-type {
       color: var(--white);
       font-weight: 700;
-      font-size: 25px;
+      font-size: 1.6em;
     }
 
     .card__content-stats > div > span:nth-of-type(2) {
       color: var(--transparent-white-60);
       text-transform: uppercase;
       font-family: var(--lexend-deca-font);
-      font-size: 13px;
+      font-size: 0.8em;
+      letter-spacing: 0.08em;
     }
 
     @media (min-width: 900px) {
       .card {
         flex-direction: row-reverse;
-        max-width: 80vw;
+        max-width: 80%;
       }
 
       .card > * {
@@ -134,16 +136,30 @@
 
       .card__content {
         text-align: left;
-        padding: 60px;
+        padding: 4vw 8vw 4vw 4vw;
+      }
+
+      .card__content-header {
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
       }
 
       .card__content-paragraph {
-        margin-bottom: 50px;
+        font-size: 1.1vw;
+        margin-bottom: 8vw;
       }
 
       .card__content-stats {
         flex-direction: row;
-        gap: 40px;
+        gap: 5vw;
+      }
+
+      .card__content-stats > div > span:first-of-type {
+        font-size: 1.6vw;
+      }
+
+      .card__content-stats > div > span:nth-of-type(2) {
+        font-size: 0.8vw;
       }
     }
 
@@ -193,7 +209,7 @@
               <span>templates</span>
             </div>
             <div>
-              <span>12m+</span>
+              <span>12M+</span>
               <span>queries</span>
             </div>
           </div>
